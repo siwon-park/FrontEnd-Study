@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Hello, I'm SIWON-PARK</h1>
+  <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'gray';
+    document.querySelector('body').style.color = 'white';
+  ">
+  <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+  ">
+  
+  <input id="dayNnight" type="button" value="night" onclick="
+    if(document.querySelector('#dayNnight').value === 'night') {
+      document.querySelector('body').style.backgroundColor = 'gray';
+      document.querySelector('body').style.color = 'white';
+      document.querySelector('#dayNnight').value = 'day';
+    } else {
+      document.querySelector('body').style.backgroundColor = 'white';
+      document.querySelector('body').style.color = 'black';
+      document.querySelector('#dayNnight').value = 'night';
+    }
+  ">
+</body>
+</html>
