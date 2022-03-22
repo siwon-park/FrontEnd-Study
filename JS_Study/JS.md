@@ -45,3 +45,26 @@
 JS의 데이터 타입에는 6가지 기본형(Primitive Type)과 객체(Object)가 있다.
 
 - 6가지 기본형: Boolean, Null, Undefined, Number, String, Symbol
+
+
+
+### 06. 변수(Variable)
+
+변수는 왜 쓰는가? => 가장 핵심은 재사용성 및 생산성의 향상
+
+※ 변수를 쓸 때는 앞에 키워드로 `var`을 쓰는 것을 '권장'한다.
+
+※ shift+enter키 : 코드 실행 유보
+
+
+
+### 07. querySelector()
+
+제어할 태그를 선택하여 동적으로 CSS를 적용 가능함
+
+![image](https://user-images.githubusercontent.com/93081720/159381871-321366e3-8638-4a42-8fd5-3bf7e0403f14.png)
+
+
+
+## ch02
+
