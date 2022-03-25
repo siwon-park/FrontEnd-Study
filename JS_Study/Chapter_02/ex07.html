@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Loop & Array</h1>
+  <script>
+    var lst = ["AMAZING", "SIWON", "PARK", "PYTHON", "JAVA", "DJANGO", "SPRING"];
+  </script>
+  <ul>
+    <script>
+      var i = 0;
+      while(i < lst.length) {
+        document.write("<li>lst[i]</li>");
+        document.write("<li>"+lst[i]+"</li>");
+        document.write('<li><a href="https://www.detail/'+lst[i]+'">'+lst[i]+'</a></li>');
+        i += 1;
+      }
+    </script>
+  </ul>
+</body>
+</html>

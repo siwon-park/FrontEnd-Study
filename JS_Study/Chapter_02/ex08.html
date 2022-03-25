@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1><a href="">WEB Pages</a></h1>
+  <input type="button" name="" value="night" onclick="
+    var my_var = document.querySelector('body');
+    var alst = document.querySelectorAll('a');
+    if (this.value === 'night') {
+      my_var.style.backgroundColor = 'gray';
+      my_var.style.color = 'white';
+      this.value = 'day';
+      var i = 0;
+      while(i < alst.length) {
+        alst[i].style.color = 'powderblue';
+        i += 1;
+      }
+    } else {
+      my_var.style.backgroundColor = 'white';
+      my_var.style.color = 'black';
+      this.value = 'night';
+      var i = 0;
+      while(i < alst.length) {
+        alst[i].style.color = 'blue';
+        i += 1;
+      }
+    }
+  ">
+  <ol>
+    <li><a href="https://www.google.com">google</a></li>
+    <li><a href="https://www.naver.com">naver</a></li>
+  </ol>
+</body>
+</html>
