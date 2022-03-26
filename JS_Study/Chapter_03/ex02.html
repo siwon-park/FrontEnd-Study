@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function dayNnight(self) {
+      var my_var = document.querySelector('body');
+      var alst = document.querySelectorAll('a');
+      if (self.value === 'night') {
+        my_var.style.backgroundColor = 'gray';
+        my_var.style.color = 'white';
+        self.value = 'day';
+        var i = 0;
+        while (i < alst.length) {
+          alst[i].style.color = 'powderblue';
+          i += 1;
+        }
+      } else {
+        my_var.style.backgroundColor = 'white';
+        my_var.style.color = 'black';
+        self.value = 'night';
+        var i = 0;
+        while (i < alst.length) {
+          alst[i].style.color = 'blue';
+          i += 1;
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1><a href="">Hello, I'm SIWON-PARK</a></h1>
+  <input type="button" name="" value="night" onclick="
+    dayNnight(this);
+    ">
+</body>
+
+</html>

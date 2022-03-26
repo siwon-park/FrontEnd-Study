@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Object</h1>
+  <script>
+    var person = {
+      "siwonpark":"siwon"
+    };
+    document.write(person.siwonpark + "<br>");
+    person.programmer = "SIWON-PARK"; // 객체에 "programmer":"SIWON-PARK"을 추가
+    document.write(person.programmer + "<br>");
+    person["AMAZING GUY"] = "SIWON"; // 객체에 "AMAZING GUY":"SIWON"을 추가
+  </script> 
+  <h1>Iteration</h1>
+  <script>
+    for(var key in person) {
+      document.write(key+":"+person[key]+"<br>");
+    }
+  </script>
+  <h1>Method & Property</h1>
+  <script>
+    person.showAll = function() {
+      for (var key in this) {
+      document.write(key + ":" + this[key] + "<br>");
+      }
+    }
+    person.showAll();
+    
+    var method1 = function(){
+      document.write("I'm Method1<br>")
+    }
+    method1();
+  </script>
+</body>
+</html>

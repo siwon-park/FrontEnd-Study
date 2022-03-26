@@ -16,6 +16,8 @@
 
 ![image](https://user-images.githubusercontent.com/93081720/159271203-4645dcbe-5ede-4dec-8259-886b02cfb851.png)
 
+※ JS의 주석은 `//`으로 자바에서의 주석과 같다(script 태그 안에서 동작함)
+
 
 
 ### 03. 이벤트(Event)
@@ -137,3 +139,60 @@ HTML은 프로그래밍 언어라고 할 수 없다 => 왜냐하면 '표현'에 
 
 ## Ch. 03
 
+### 01. 함수(function)
+
+JS에서 함수 선언 키워드는 `function`이다.
+
+※ 자기 자신을 매개 변수로 받을 때는 self로, 인자로 받을 때는 this로 한다.
+
+JS의 함수는 자바처럼 함수의 리턴값에 대해 명명하지 않아도 된다. 파이썬처럼 그냥 return 해도 됨
+
+![image](https://user-images.githubusercontent.com/93081720/160242171-de18e7c0-cf49-4c1b-9f56-de0982472b87.png)
+
+
+
+## Ch. 04
+
+### 01. 객체(Object)
+
+JS에서 객체는 `{}` 중괄호로 선언한다. Python의 딕셔너리와 매우 유사하다.
+
+객체의 변수를 프로퍼티(Property), 객체의 함수를 메서드(Method)라고 한다.
+
+`.`은 Object Access Operator이다. 대괄호`[]`안에 key값을 써서 value값에도 접근이 가능하다.
+
+![image](https://user-images.githubusercontent.com/93081720/160242319-5b655007-582c-4d02-b608-24bbc4d6ac6c.png)
+
+
+
+객체 안에 다음과 같이 함수(메서드)를 담을 수도 있다. 표기형태가 조금 다름에 유의하자. 또한 메서드가 여러 개일 경우, 각 메서드의 선언 끝 이후 콤마를 찍는 것도 잊지 말아야한다.
+
+![image](https://user-images.githubusercontent.com/93081720/160242609-7c4b21dc-8f19-461a-9ad8-1984cb3403c1.png)
+
+
+
+### 02. 객체 순회(Iteration)
+
+파이썬의 for - in 구문, 자바의 for each구문과 같이 JS도 객체 순회가 가능하다.
+
+`for(var 변수 in 객체)`형태로 사용한다.
+
+![image](https://user-images.githubusercontent.com/93081720/160242400-1f8cfa0d-3668-481e-980d-8dd2c421e9db.png)
+
+
+
+### 03. 메서드 선언
+
+객체의 함수를 메서드라고 하며, 다음과 같이 하나의 변수처럼 선언할 수 있다.
+
+① `객체.메서드 = function()`
+
+② `var 메서드 = function()`
+
+![image](https://user-images.githubusercontent.com/93081720/160242458-65012d27-3d5e-453c-a48d-72f8c8e23b72.png)
+
+
+
+※ 객체화의 장점? 객체 안에 함수를 선언해서 넣는데, 동일한 이름으로 해당 객체에서 대해서만 기능하는 함수를 선언할 수도 있음
+
+![image](https://user-images.githubusercontent.com/93081720/160242732-1abcf458-1769-4338-b200-b2c2c498d0eb.png)
