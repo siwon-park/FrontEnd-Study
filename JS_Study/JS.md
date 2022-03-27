@@ -196,3 +196,67 @@ JS에서 객체는 `{}` 중괄호로 선언한다. Python의 딕셔너리와 매
 ※ 객체화의 장점? 객체 안에 함수를 선언해서 넣는데, 동일한 이름으로 해당 객체에서 대해서만 기능하는 함수를 선언할 수도 있음
 
 ![image](https://user-images.githubusercontent.com/93081720/160242732-1abcf458-1769-4338-b200-b2c2c498d0eb.png)
+
+
+
+## Ch. 05
+
+### 01. JS 활용(JS파일화)
+
+script 태그 안에서 선언했던 재사용 가능한 코드들, 함수, 객체 등만을 묶어서 `.js`파일로 만들어서 script태그의 `src`속성을 통해 불러오기가 가능함. 이렇게 사용하면 관리 및 유지보수에 엄청난 용이성과 효율성이 생길 뿐만 아니라 코드가 명확해지고(html따로, js따로), 가독성이 좋아진다는 장점도 생긴다.
+
+![image](https://user-images.githubusercontent.com/93081720/160273135-7d2d8766-9c5a-4030-91be-e73ef16990f4.png)
+
+
+
+또한 파일을 분리하면 캐시(cache)입장에서도 장점이 생기는데, 웹페이지는 js파일을 네트워크에서 일단 한 번 다운로드해서 저장(캐싱)을 해두면, 다음에 해당 웹 페이지를 불러올 때, 네트워크로부터 다시 다운로드할 필요 없이 저장된 것을 불러오기만 하면 되기 때문에 속도면에서도 이점이 생긴다.
+
+[웹 페이지 호출 시, js파일을 네트워크로부터 다운로드해오는 모습]
+
+![image](https://user-images.githubusercontent.com/93081720/160273066-68d9f5fc-0bc5-45d8-bba6-967765dcafcc.png)
+
+
+
+### 02. 라이브러리(library)와 프레임워크(framework)
+
+※ 소프트웨어의 사회성? 오늘날 우리는 소프트웨어를 혼자 만들지 않는다. 또한 하나의 툴만 사용해서 만들지 않는다. 여러 명과 협업하며 여러 툴을 활용해서 소프트웨어를 만든다. 이를 소프트웨어의 사회성이라고 한다.
+
+라이브러리와 프레임워크 둘 다 프로젝트 개발에 필요한 재사용 가능성이 있는 유용한 코드 및 기능들을 갖고 있지만, 엄밀히 말해서 서로 다른 개념이다.
+
+라이브러리는 내가 라이브러리와 그 기능들을 가져와서 내 의지에 맞게 프로젝트에 기능을 적용시키는 것인 반면, 프레임워크는 기능 제공을 프레임워크에서 하고, 프레임워크만의 규칙에 따라 프레임워크 위에서 작업을 한다고 보면 됨
+
+#### jQuery(제이쿼리)
+
+[jQuery홈페이지](https://jquery.com/)
+
+JS의 유명하고 유용한 라이브러리 중 하나.
+
+- 적용 방법
+  - 자기 자신의 프로젝트 폴더에 jQuery를 다운받아서 집어 넣는다.
+  - CDN(Content Delivery Network)를 활용한다.
+
+![image](https://user-images.githubusercontent.com/93081720/160281956-3c6476e9-050d-4c3d-97e7-c29c7ad06eac.png)
+
+html의 head영역 안에 부트스트랩 CDN을 넣듯이 head영역 안 script태그 안에 src의 속성값으로 jQuery CDN을 적용
+
+- 사용하기
+  - JS파일에서 jQuery 적용시키기
+    - `$`를 사용하며, 다음과 같이 적용 가능하다
+
+![image](https://user-images.githubusercontent.com/93081720/160282050-1517272e-e559-4efc-8177-8b94e6c4e27e.png)
+
+- `$('body').css("color", color)`: body 태그의 css속성 중 color를 color인자로 들어온 값으로 적용시키겠다는 의미
+- `$('body').css("backgroundColor", color)`: body 태그의 css속성 중 backgroundColor를 color인자로 들어온 값으로 적용시키겠다는 의미
+
+
+
+### 03. UI vs. API
+
+#### UI; User Interface
+
+- 사용자들이 시스템을 사용하면서 접하는 점, 또는 사용자들이 시스템을 제어하기 위해 조작하는 장치(접점)
+
+#### API; Application Programming Interface
+
+- 프로그래머가 사용하는 장치 또는 접점
+- 프로그래머는 API를 활용해 다양한 기능들을 구현할 수 있다.
