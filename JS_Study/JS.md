@@ -260,3 +260,27 @@ html의 head영역 안에 부트스트랩 CDN을 넣듯이 head영역 안 script
 
 - 프로그래머가 사용하는 장치 또는 접점
 - 프로그래머는 API를 활용해 다양한 기능들을 구현할 수 있다.
+
+
+
+## ch. 06
+
+### 01. 객체
+
+서로 연관된 변수와 함수를 그룹핑하고 이름을 붙인 것
+
+객체를 만드는 이유? 비슷한 것(변수 및 기능)을 그룹핑하여 코드의 재사용성을 높일 수 있음
+
+
+
+### 02. node.js
+
+터미널 창에서 `node 파일명`을 입력하여 JS파일을 실행하고 그 결과를 출력할 수 있다.
+
+![image](https://user-images.githubusercontent.com/93081720/160437378-d2b24ef4-2dda-46f9-9085-7b5fb38ca7cf.png)
+
+
+
+![image](https://user-images.githubusercontent.com/93081720/160437058-f97c140b-c9cd-4d50-b1eb-5fc741202557.png)
+
+`console.log()`를 통해서 출력 가능 
