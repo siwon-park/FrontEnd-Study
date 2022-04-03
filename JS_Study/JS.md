@@ -145,6 +145,12 @@ JS에서 함수 선언 키워드는 `function`이다.
 
 ※ 자기 자신을 매개 변수로 받을 때는 self로, 인자로 받을 때는 this로 한다.
 
+![image](https://user-images.githubusercontent.com/93081720/160527641-c44ed4fe-d1b9-4de1-8b6f-1ad49db34758.png)
+
+![image](https://user-images.githubusercontent.com/93081720/160527861-dda13220-8407-4c9c-b6bd-eb50de568bd9.png)
+
+
+
 JS의 함수는 자바처럼 함수의 리턴값에 대해 명명하지 않아도 된다. 파이썬처럼 그냥 return 해도 됨
 
 ![image](https://user-images.githubusercontent.com/93081720/160242171-de18e7c0-cf49-4c1b-9f56-de0982472b87.png)
@@ -284,3 +290,41 @@ html의 head영역 안에 부트스트랩 CDN을 넣듯이 head영역 안 script
 ![image](https://user-images.githubusercontent.com/93081720/160437058-f97c140b-c9cd-4d50-b1eb-5fc741202557.png)
 
 `console.log()`를 통해서 출력 가능 
+
+
+
+### 03. this
+
+객체 자기 자신을 참조하는 키워드
+
+![image](https://user-images.githubusercontent.com/93081720/160528689-cbe7ea8e-ae26-4733-b6ba-5da80260ec8b.png)
+
+
+
+### 04. 생성자(constructor)
+
+다른 언어에서의 클래스와 같은 개념임. 생성자 함수를 정의하고 new를 통해 호출하여 객체를 만든다.
+
+![image](https://user-images.githubusercontent.com/93081720/161434882-255e6178-e6f9-4402-bd83-df21aafa6554.png)
+
+그러나 이와 같이 매번 생성자 함수 안에서 메서드를 정의하는 것은 생성자가 생성될 때마다 해당 메서드가 계속 생성되고 있다는 의미이므로, 메모리 낭비다.
+
+또한 해당 객체의 sum함수이므로, 수정이 필요할 경우 모든 객체의 sum을 별도로 수정해줘야한다는 비효율이 발생하여 생산성이 너무나도 떨어진다.
+
+이를 해결하기 위해 prototype이라는 개념을 활용한다.
+
+
+
+### 05. prototype
+
+JS를 prototype based language라고도 함
+
+아래와 같이 객체들이 공유할 메서드를 prototype으로 정의함으로써 객체가 생성될 때마다 메서드가 생성되는 것이 아니라 메모리를 절약할 수 있음
+
+또한 sum에 수정이 필요할 경우 해당 prototype만 한번 수정하면 되므로 생산성이 높아진다.
+
+![image](https://user-images.githubusercontent.com/93081720/161434999-b807af71-ccd2-4403-b664-30840d57d0d4.png)
+
+그리고 필요할 경우, 아래와 같이 어떤 한 객체에 대한 함수도 수정 가능하다.
+
+![image](https://user-images.githubusercontent.com/93081720/161435074-2987cc0b-0d01-4e6a-b69f-3d85465a96d8.png)
