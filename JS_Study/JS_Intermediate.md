@@ -42,6 +42,8 @@ JS가 브라우저와 소통하기 위한 모델
 
 => 선택한 객체를 조작한다.
 
+![image](https://user-images.githubusercontent.com/93081720/165657226-b79c6f24-474c-42f2-82c8-200549de8e6f.png)
+
 <br>
 
 ### DOM 객체의 상속 구조
@@ -92,6 +94,8 @@ Event Listener를 가질 수 있는 객체가 구현하는 DOM 인터페이스
 
 제공한 선택자와 일치하는 모든 element를 선택하여 NodeList로 반환(Static Collection NodeList)
 
+해당하는 객체가 없으면 빈 리스트를 반환함
+
 ※ NodeList
 
 - 인덱스로만 각 항목에 접근 가능
@@ -117,6 +121,8 @@ Event Listener를 가질 수 있는 객체가 구현하는 DOM 인터페이스
 - Static Collection(non-live)
   - DOM이 변경되어도 Collection 내용에는 영향을 주지 않음(실시간 변경 X)
   - querySelectorAll()의 반환 NodeList는 Static Collection임
+
+![image](https://user-images.githubusercontent.com/93081720/165657034-54987f32-9632-48e1-bdac-7d15d29d1eee.png)
 
 <br>
 
@@ -246,4 +252,10 @@ name인자에는 'id' 또는 'class' 및 '속성명'을 지정함
 ### Event 취소
 
 #### `event.preventDefault()`
+
+현재 이벤트의 기본 동작을 중단함
+
+HTML 요소의 기본 동작을 작동하지 않게 막음
+
+취소할 수 없는 이벤트도 있음
 
