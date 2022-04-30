@@ -1,5 +1,13 @@
 # JS 심화
 
+### ※ JS에서 표준이 중요한 이유
+
+브라우저마다 코드를 따로 만들게되면 작성한 코드가 브라우저 간 호환이 되지 않을 수 있기 때문에 표준이 중요하다.(크로스 브라우징 이슈)
+
+또한 브라우저마다 코드를 따로만들게 되면 코드의 재사용성이 낮아지고 비효율이 증가한다.
+
+<br>
+
 ## 1. DOM 기본
 
 ### ※ DOM(Document Object Model)
@@ -101,9 +109,11 @@ Event Listener를 가질 수 있는 객체가 구현하는 DOM 인터페이스
 - 인덱스로만 각 항목에 접근 가능
 - HTML Collection과 달리 배열에서 사용하는 forEach메서드 및 다양한 메서드를 사용 가능함
 
+![image](https://user-images.githubusercontent.com/93081720/165657034-54987f32-9632-48e1-bdac-7d15d29d1eee.png)
+
 <br>
 
-※ getElementById(), getElementByTagName(), getElementByClassName() 대신 querySelector()와 querySelectorAll()을 사용하는 이유? 
+**※ getElementById(), getElementByTagName(), getElementByClassName() 대신 querySelector()와 querySelectorAll()을 사용하는 이유?** 
 
 => querySelector()와 querySelectorAll()은 id, class, tag 등을 모두 사용 가능하므로 유연하며, 좀 더 구체적인 선택이 가능하기 때문
 
@@ -121,8 +131,6 @@ Event Listener를 가질 수 있는 객체가 구현하는 DOM 인터페이스
 - Static Collection(non-live)
   - DOM이 변경되어도 Collection 내용에는 영향을 주지 않음(실시간 변경 X)
   - querySelectorAll()의 반환 NodeList는 Static Collection임
-
-![image](https://user-images.githubusercontent.com/93081720/165657034-54987f32-9632-48e1-bdac-7d15d29d1eee.png)
 
 <br>
 
@@ -237,11 +245,23 @@ name인자에는 'id' 또는 'class' 및 '속성명'을 지정함
 
 ![image](https://user-images.githubusercontent.com/93081720/165467594-99e5ed6e-49f1-4a2c-81f5-6c0a8aa6cea5.png)
 
-- 대상(EventTarget)
+- #### 대상(EventTarget)
+  
   - 이벤트 대상, HTML 객체(Element, Document, Window 등)
-- 타입(type)
-  - 이벤트의 종류, 유형
-- 리스너(listener)
+- #### 타입(type)
+  
+  - 이벤트의 종류, 유형(문자열로 작성)
+    - click : 포인팅 장치 버튼이 엘리먼트에서 눌렸다가 놓였을 때
+    - mouseover : 포인팅 장치가 리스너가 등록된 엘리먼트나 그 자식 엘리먼트의 위로 이동했을 때
+    - mouseout : 포인팅 장치가 리스너가 등록된 엘리먼트 또는 그 자식 엘리먼트의 밖으로 이동했을 때
+    - keydown : 키가 눌렸을 때
+    - keyup : 키 누름이 해제될 때
+    - load : 리소스와 그 의존 리소스의 로딩이 끝났을 때
+    - scroll : 다큐먼트 뷰나 엘리먼트가 스크롤되었을 때
+    - change : 인풋태그, 셀렉트 태그, 텍스트에어리어 태그에 있는 값의 변경이 발생했을 때(input과는 달리 유저가 변화에 대해 commit했을 때 발생)
+    - input :  인풋태그, 셀렉트 태그, 텍스트에어리어 태그에 입력으로 뭔가 들어왔을 때(변화가 있을 때)
+- #### 리스너(listener)
+  
   - 지정된 타입의 이벤트가 발생했을 때 알림을 받는 객체
   - 함수, 콜백 함수 등(단, 호출을 해서 결과를 넘기는 것이 아니라 함수 자체를 넘겨야함)
 
@@ -253,9 +273,10 @@ name인자에는 'id' 또는 'class' 및 '속성명'을 지정함
 
 #### `event.preventDefault()`
 
-현재 이벤트의 기본 동작을 중단함
+- 현재 이벤트의 기본 동작을 중단함
 
-HTML 요소의 기본 동작을 작동하지 않게 막음
+- HTML 요소의 기본 동작을 작동하지 않게 막음
+  - 예) form 태그의 기본 동작 form 데이터 전송(submit)을 막음
 
-취소할 수 없는 이벤트도 있음
+- 취소할 수 없는 이벤트도 있음
 
