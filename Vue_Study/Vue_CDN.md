@@ -325,3 +325,21 @@ object형태로 사용하면 value가 참(true)인 key가 class 바인딩 값으
 ### View LifeCycle Hooks
 
 ![image](https://user-images.githubusercontent.com/93081720/166928878-4d7f12e5-a65a-42ad-9ff4-36fdc734402f.png)
+
+<br>
+
+#### created
+
+- Vue Instance가 생성되는 시점
+
+
+
+#### mounted
+
+- Vue Instance와 DOM이 연결되는 시점
+
+
+
+#### updated
+
+- data의 변화 이후 DOM이 변경되는 시점에 발생

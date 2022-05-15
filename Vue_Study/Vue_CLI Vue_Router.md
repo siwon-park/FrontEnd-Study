@@ -29,7 +29,7 @@ Vue의 컴포넌트 기반 개발의 핵심 특징 => 하나의 컴포넌트는 
 한 화면 안에서도 기능별로 다양한 컴포넌트 존재
 
 - 하나의 컴포넌트는 여러 개의 하위 컴포넌트를 가질 수 있음 => 트리 구조와 요소
-- 컴포넌트 기반의 개발이 반드시 파일 단위로 구분되어야 하는 것은 아님을 유의
+- 컴포넌트 기반의 개발이 **반드시 파일 단위로 구분되어야 하는 것은 아님**을 유의
   - 하나의 파일 안에서도 여러 개의 컴포넌트를 만들어 개발 가능
 
 ![image](https://user-images.githubusercontent.com/93081720/167391414-657279b6-93f1-4f07-83bc-e9bf4343d380.png)
@@ -46,7 +46,7 @@ Vue의 컴포넌트 기반 개발의 핵심 특징 => 하나의 컴포넌트는 
 
 JS를 위한 패키지 관리자 => 다양한 의존성 패키지를 관리
 
-- Python에 pip가 있다면 Node.js에는 NPM이 있음
+- Python에 pip가 있다면 Node.js에는 npm이 있음
 - Node.js의 기본 패키지 관리자로 Node.js 설치 시 기본적으로 설치됨
 
 
@@ -83,7 +83,7 @@ JS를 위한 패키지 관리자 => 다양한 의존성 패키지를 관리
 
 ![image](https://user-images.githubusercontent.com/93081720/167431615-a8c93c12-9817-4f6a-9671-ce96116fcb48.png)
 
-
+<br>
 
 #### Babel
 
@@ -91,33 +91,41 @@ JS의 ECMAScript 2015+ 코드를 이전 버전으로 변환해 주는 도구(Com
 
 => 최신 버전의 코드(원시 코드)를 구버전의 코드(목적 코드)로 옮기는 번역기 역할을 하며, Babel의 등장으로 더 이상 작성된 코드가 특정 브라우저에서 동작하지 않는 상황에 대해 고민을 줄일 수 있게 됨
 
-
+<br>
 
 #### Webpack
 
-모듈 간의 의존성 문제를 해겨하기 위한 도구(Module Bundler)
+모듈 간의 의존성 문제를 해결하기 위한 도구(Module Bundler)
 
 프로젝트에 필요한 모든 모듈을 맵핑하고 내부적으로 종속성 그래프를 빌드함
 
-
+<br>
 
 #### node_modules
 
 node.js 환경의 여러 의존성 모듈이 모여 있는 곳 => venv와 유사함
 
-
+<br>
 
 #### index.html
 
 Vue 앱의 뼈대가 되는 파일, 실제 제공되는 단일 html 파일
 
-
+<br>
 
 #### App.vue
 
 최상위 컴포넌트
 
+<br>
 
+#### main.js
+
+실제 단일 파일에서 DOM과 data를 연결했던 것과 동일한 작업이 이루어지는 곳
+
+Vue 전역에서 활용할 모듈을 등록할 수 있는 파일
+
+<br>
 
 #### pakage_lock.json, package.json
 
@@ -125,7 +133,7 @@ Vue 앱의 뼈대가 되는 파일, 실제 제공되는 단일 html 파일
 
  => requirements.txt파일과 유사하며, 자동으로 업데이트되기 때문에 별도로 freeze가 필요 없다.
 
-
+<br>
 
 ### 3. Props & $Emit event
 
@@ -152,17 +160,20 @@ Vue 앱의 뼈대가 되는 파일, 실제 제공되는 단일 html 파일
 
 ![image](https://user-images.githubusercontent.com/93081720/167433106-1d6c0323-bf5e-4e3f-ab53-dc7ace47029c.png)
 
-- 불러오기
+- ##### 1. 불러오기(import)
+  
   - 하위 컴포넌트를 import해옴
 
 ![image](https://user-images.githubusercontent.com/93081720/167434099-946b0e6c-e4aa-42b0-aa0c-ff0af64a78ba.png)
 
-- 등록하기
+- ##### 2. 등록하기(register)
+  
   - 하위 컴포넌트를 등록함
 
 ![image](https://user-images.githubusercontent.com/93081720/167434302-37417639-f53c-4847-bb73-7086e0d28913.png)
 
-- 보여주기
+- ##### 3. 보여주기(print)
+  
   - 템플릿에 보여줌
 
 ★☆ 템플릿에 값을 전달하고자 할 때는 반드시 `v-bind`나 `:`을 사용해야한다. 
@@ -176,7 +187,7 @@ Vue 앱의 뼈대가 되는 파일, 실제 제공되는 단일 html 파일
 
 
 
-★☆ 컴포넌트의 data는 반드시 함수여야함 ☆★
+★☆ **컴포넌트의 data는 반드시 함수여야함** ☆★
 
 기본적으로 각 인스턴스는 모두 같은 data 객체를 공유하므로, 새로운 data 객체를 반환해야함
 
@@ -217,7 +228,7 @@ childInputEnter는 '발생되는-event-이름'을 발생시키고, childInputDat
 
 ![image](https://user-images.githubusercontent.com/93081720/167441504-21968e84-b1fe-4fae-8313-9f9cf79606c6.png)
 
-★☆ event명 네이밍 컨벤션 ☆★
+★☆ **event명 네이밍 컨벤션** ☆★
 
 컴포넌트 및 props와 달리, 이벤트는 자동 대소문자 변환을 제공하지 않음
 
@@ -287,29 +298,61 @@ vue router로 인해 App.vue의 코드가 변경되었으며, router폴더에 in
 
 
 
-#### `<router-link>`
+#### 1. `<router-link>`
 
+사용자 네비게이션을 가능케하는 컴포넌트
 
+목포 경로(url)를 'to' 속성에 지정해준다.
 
-#### `<router-view>`
+HTML5 히스토리 모드에서 router-link는 클릭 이벤트를 차단하여 브라우저가 페이지를 다시 로드하지 않도록 함 => a 태그지만 기본 GET요청을 보내는 이벤트를 제거한 형태로 구성됨
 
+#### ※ Histroy Mode(히스토리 모드)
 
+브라우저의 히스토리는 남기지만 실제 페이지는 이동하지 않는 기능을 지원
 
-#### `this.$router.push`
+=> 페이지를 다시 로드하지 않고 URL을 탐색 가능
 
+=> SPA의 단점 중 하나인 "URL이 변경되지 않는다"를 해결
 
+<br>
+
+#### 2. `<router-view>`
+
+주어진 라우터에 대해 일치하는 컴포넌트를 렌더링하는 컴포넌트
+
+실제 컴포넌트가 DOM에 부착되어 보이는 자리를 의미함 => router-link를 클릭하면 해당 경로와 연결되어 있는 index.js에 정의한 컴포넌트가 위치한 곳으로 이동
+
+<br>
+
+#### 3. `this.$router.push`
+
+`<router-link to="...">`방식이 a태그를 만드는 '선언적 방식'이라면, `$router.push(...)`방식은 '프로그래밍 방식'임 => 두 방식의 기능적인 부분은 차이가 없음
+
+<br>
+
+#### 4. Dynamic Route Matching
+
+동적 인자 전달 => `:` 사용
+
+주어진 '패턴'을 가진 라우트를 동일한 컴포넌트에 맵핑해야하는 경우 사용
+
+- 예) 각기 다른 userId값을 url에 맵핑해야할 경우 사용(django의 urls.py의 path함수에 url을 지정할 때 `<int: article_pk>`와 같이 쓰는 것과 유사)
+
+![image](https://user-images.githubusercontent.com/93081720/168484561-506c4005-f651-4882-8d78-c1be94e60772.png)
+
+<br>
 
 #### views/
 
 router(index.js)에 맵핑되는 컴포넌트를 모아두는 폴더
 
-
+<br>
 
 #### components/
 
 router에 맵핑된 컴포넌트 내부에 작성하는 컴포넌트를 모아두는 폴더
 
-
+<br>
 
 ### 1. Quick Start - Router
 
@@ -329,17 +372,7 @@ router에 맵핑된 컴포넌트 내부에 작성하는 컴포넌트를 모아�
 
 모두 yes
 
-#### ※ Histroy Mode
-
-브라우저의 히스토리는 남기지만 실제 페이지는 이동하지 않는 기능을 지원함
-
-=> 페이지를 다시 로드하지 않고 URL을 탐색할 수 있음
-
-=> SPA의 단점 중 하나인 "URL이 변경되지 않는다"를 해결
-
-
-
-
+<br>
 
 ### Vue Router가 필요한 이유
 
