@@ -324,19 +324,24 @@ object형태로 사용하면 value가 참(true)인 key가 class 바인딩 값으
 
 ### View LifeCycle Hooks
 
+각 Vue 인스턴스는 생성될 때 일련의 초기화 단계를 거침
+
+- 예) 인스턴스를 DOM에 마운트하는 경우, 데이터가 변경되어 DOM을 업데이트하는 경우 등
+
 ![image](https://user-images.githubusercontent.com/93081720/166928878-4d7f12e5-a65a-42ad-9ff4-36fdc734402f.png)
 
 <br>
 
 #### created
 
-- Vue Instance가 생성되는 시점
+- Vue Instance가 생성되는 시점에 호출됨
+- created를 사용해 어플리케이션의 초기 데이터를 API 요청을 통해 불러올 수 있음
 
 
 
 #### mounted
 
-- Vue Instance와 DOM이 연결되는 시점
+- Vue Instance와 DOM이 연결되는 시점에 호출
 
 
 
