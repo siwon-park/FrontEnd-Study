@@ -306,6 +306,10 @@ vue router로 인해 App.vue의 코드가 변경되었으며, router폴더에 in
 
 HTML5 히스토리 모드에서 router-link는 클릭 이벤트를 차단하여 브라우저가 페이지를 다시 로드하지 않도록 함 => a 태그지만 기본 GET요청을 보내는 이벤트를 제거한 형태로 구성됨
 
+![image](https://user-images.githubusercontent.com/93081720/169050669-0bc8bbdf-cf52-4649-816a-475c802ec776.png)
+
+<br>
+
 #### ※ Histroy Mode(히스토리 모드)
 
 브라우저의 히스토리는 남기지만 실제 페이지는 이동하지 않는 기능을 지원
@@ -321,6 +325,8 @@ HTML5 히스토리 모드에서 router-link는 클릭 이벤트를 차단하여 
 주어진 라우터에 대해 일치하는 컴포넌트를 렌더링하는 컴포넌트
 
 실제 컴포넌트가 DOM에 부착되어 보이는 자리를 의미함 => router-link를 클릭하면 해당 경로와 연결되어 있는 index.js에 정의한 컴포넌트가 위치한 곳으로 이동
+
+![image](https://user-images.githubusercontent.com/93081720/169050963-f8e1cedb-9a21-4f03-97bc-d774bca27fa6.png)
 
 <br>
 
