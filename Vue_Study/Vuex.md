@@ -169,3 +169,9 @@ vuex state를 자동으로 브라우저의 Local Storage에 저장해주는 라�
 - 사용
 
 ![image](https://user-images.githubusercontent.com/93081720/168064476-d5f71397-f3e8-452a-9ffb-207b6a73c565.png)
+
+
+
+※ 로그아웃 기능에서 로그아웃 시 localStorage에서 vuex정보를 삭제시켜주는 것이 좋음
+
+![image](https://user-images.githubusercontent.com/93081720/170069407-a3368558-8a65-44dd-88a8-c34c73388287.png)
