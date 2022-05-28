@@ -280,9 +280,29 @@ SPA 상에서 라우팅을 쉽게 개발할 수 있는 기능을 제공함
 
 ※ router: 위치에 대한 최적의 경로를 지정하며, 이 경로를 따라 데이터를 다음 장치로 전향시키는 장치
 
+<br>
 
+### 1. Quick Start - Router
 
-### Vue Router
+#### 1. 프로젝트 생성 및 이동
+
+`vue create kebab-case-app-name`
+
+`cd kebab-case-app-name`
+
+#### 2. Vue Router Plugin 설치
+
+`vue add router`
+
+※ 기존 프로젝트를 진행하는 도중에 플러그인을 설치하면 App.vue에 써있던 내용을 다 덮어쓰므로, 아예 프로젝트 시작 시 설치하거나, 백업 후 설치를 권장
+
+#### 3. commit/history 모드 여부 확인
+
+모두 yes
+
+<br>
+
+### 2. Vue Router
 
 vue router로 인해 App.vue의 코드가 변경되었으며, router폴더에 index.js가 생기고, views 디렉토리가 새로 생기게 됨
 
@@ -348,6 +368,31 @@ HTML5 히스토리 모드에서 router-link는 클릭 이벤트를 차단하여 
 
 <br>
 
+#### ※ ☆★Vue router는 routes 배열에서 순차적으로 url을 검색함★☆
+
+아래 예시에서 프로필 수정(`/profile/edit`)을 상대방 프로필 조회(`/profile/:userId`)의 아래에 쓸 경우 vue 클라이언트의 주소창에 `http://localhost:8080/profile/edit`을 입력하더라도 'edit'이라는 userId에 해당하는 user 프로필을 찾으려고 함 => axios 요청 시 undefined 에러 발생
+
+=> 개발자의 의도는 userId는 id 번호(숫자값)이지만, 상대방 프로필 라우팅을 더 위에 쓸 경우 실제 주소에 들어갈 때는 edit이나 7, 9나 같은 라우팅으로 들어감. 즉, profile/edit을 프로필 수정으로, profile/7, profile/9을 상대방 프로필 조회 경로로 사용하고자 했지만 전부 상대방 프로필을 조회하기 위한 url로 사용되는 것임
+
+따라서 프로필 수정 경로로 정확하게 라우팅 하려면 프로필 수정을 상대방 프로필 조회보다 위에 쓰던가 아니면 아예 url 지정 방식을 달리하여(예- `/edit/profile`) 상대방 프로필 라우팅 위, 아래 상관 없이 쓰게 하던가 하면 됨
+
+![image](https://user-images.githubusercontent.com/93081720/170823898-3dcc7efb-02b9-4445-be66-8548d6f4a4b3.png)
+
+<br>
+
+#### ※ redirect
+
+vue router에 등록되지 않은 url일 경우 => 등록되지 않은 모든 url(`*`)에 대해 redirection 가능
+아래 예시와 같이 등록되지 않은 모든 url에 대해 404 Not Found를 출력하고 싶으면 redirection을 아래와 같이 지정해주면 됨  
+
+![image](https://user-images.githubusercontent.com/93081720/170824612-5ffcd891-8507-4159-8a28-519ffe48e7e3.png)
+
+<br>
+
+![image](https://user-images.githubusercontent.com/93081720/170824717-cb5c6fb2-961b-4939-bb94-5c7c52a7ac90.png)
+
+<br>
+
 #### views/
 
 router(index.js)에 맵핑되는 컴포넌트를 모아두는 폴더
@@ -360,27 +405,7 @@ router에 맵핑된 컴포넌트 내부에 작성하는 컴포넌트를 모아�
 
 <br>
 
-### 1. Quick Start - Router
-
-#### 1. 프로젝트 생성 및 이동
-
-`vue create kebab-case-app-name`
-
-`cd kebab-case-app-name`
-
-#### 2. Vue Router Plugin 설치
-
-`vue add router`
-
-※ 기존 프로젝트를 진행하는 도중에 플러그인을 설치하면 App.vue에 써있던 내용을 다 덮어쓰므로, 아예 프로젝트 시작 시 설치하거나, 백업 후 설치를 권장
-
-#### 3. commit/history 모드 여부 확인
-
-모두 yes
-
-<br>
-
-### Vue Router가 필요한 이유
+### 3. Vue Router가 필요한 이유
 
 Vue.js에서 라우팅을 편리하게 할 수 있는 Tool을 제공해주는 라이브러리
 
@@ -391,3 +416,48 @@ Vue.js에서 라우팅을 편리하게 할 수 있는 Tool을 제공해주는 �
   - 서버는 index.html 하나만 제공하며, 이후 모든 처리는 HTML위에서 JS코드를 활용
   - 요청에 대한 처리를 더 이상 서버에서 하지 않음(할 필요가 없어짐)
   - CSR(Client Side Rendering) => 클라이언트는 더 이상 서버로 요청을 보내지 않고, 응답받은 HTML 문서 안에서 주소가 변경되면 특정 주소에 맞는 컴포넌트를 렌더링함. 라우팅에 대한 결정권을 클라이언트에서 가짐
+
+<br>
+
+## Navigation Guard
+
+네비게이션 가드(navigation guard)란 뷰 라우터로 특정 URL에 접근할 때 해당 URL의 접근을 막는 방법을 말함. 예를 들어, 사용자의 인증 정보가 없으면 특정 페이지에 접근하지 못하게 할 때 사용하는 기술
+
+### 1. Navigation Guard 종류
+
+- 애플리케이션 전역에서 동작하는 **전역 가드**
+- 특정 URL에서만 동작하는 **라우터 가드**
+- 라우터 컴포넌트 안에 정의하는 **컴포넌트 가드**
+
+<br>
+
+### 2. 전역 가드(Global Before Guards)
+
+![image](https://user-images.githubusercontent.com/93081720/170826214-a653d748-c11b-4990-9050-52c2650f1cf7.png)
+
+<br>
+
+#### router.beforeEach()
+
+- to : 이동할 url 정보가 담긴 라우터 **객체**
+- from : 현재 url 정보가 담긴 라우터 **객체**
+- next : to에서 지정한 url로 이동하기 위해 꼭 호출해야 하는 **함수**
+
+<br>
+
+### 2. 라우터 가드와 컴포넌트 가드
+
+라우터 가드와 컴포넌트 가드도 같은 원리로 동작하지만 URL 이동을 막기 위해 사용하는 API만 조금 다름
+
+#### 라우터 가드
+
+![image](https://user-images.githubusercontent.com/93081720/170826630-82129f82-1e61-40d9-992c-cae08374d255.png)
+
+<br>
+
+#### 컴포넌트 가드
+
+![image](https://user-images.githubusercontent.com/93081720/170826824-4995aadf-6a99-4094-ac20-49b7a4917050.png)
+
+<br>
+
