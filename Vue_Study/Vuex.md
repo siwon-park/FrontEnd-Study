@@ -175,3 +175,13 @@ vuex state를 자동으로 브라우저의 Local Storage에 저장해주는 라�
 ※ 로그아웃 기능에서 로그아웃 시 localStorage에서 vuex정보를 삭제시켜주는 것이 좋음
 
 ![image](https://user-images.githubusercontent.com/93081720/170069407-a3368558-8a65-44dd-88a8-c34c73388287.png)
+
+<br>
+
+-----
+
+### `$`의 의미
+
+Vue 코드를 보면 prefix로 `$`가 붙은 것을 볼 수 있는데, 이는 Vue Instance의 속성 또는 Vue Instance의 메서드를 의미한다
+
+유저가 정의한 속성(user-defined properties)과 구분 짓기 위한 용도도 있다. => 개발자가 코드를 보았을 때, 현재 컴포넌트가 아닌 어딘가에서 정의되어 있음을 칭하는 지칭자(indicator)로서의 역할도 한다.
