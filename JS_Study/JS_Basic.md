@@ -451,6 +451,10 @@ break 및 default문을 사용 가능하나, break문이 없는 경우 break문�
 
 <br>
 
+배열의 덧셈(리스트 + 리스트 붙이기)
+
+- arr1.push(...arr2) => arr2를 spread operator(...)로 풀은 뒤에 push함
+
 #### Array Helper Method
 
 ![image](https://user-images.githubusercontent.com/93081720/165325243-bc918d95-e254-4554-a7a8-13fbd45572ca.png)
