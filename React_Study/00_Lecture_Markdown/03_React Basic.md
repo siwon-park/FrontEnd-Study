@@ -80,9 +80,21 @@ JSX는 HTML이 아니다. JS코드 중 하나이며, 따라서 HTML 문법 규�
 
 #### 루트 엘리멘트
 
-JSX에서 Vue에서와 마찬가지로 하나의 루트 엘레멘트를 갖는다
+JSX에서 Vue에서와 마찬가지로 하나의 루트 엘리멘트를 갖는다
 
-왜?(나중에 서술)
+#### 왜 하나의 루트 엘리멘트가 필요한가?
+
+예전에는 React를 import하여 React.creatElement로 코드를 짰음
+
+![image](https://user-images.githubusercontent.com/93081720/176991691-3c2b2a05-bfa4-401c-b578-accfa0a3647b.png)
+
+위 예시에서 보면 div태그 하나를 return하며, 그 안에는 2개의 React 객체가 담겨있음
+
+여기서 만약 하나의 루트 엘리멘트가 아니라면? 어떻게 될까?
+
+![image](https://user-images.githubusercontent.com/93081720/176991777-006796ad-7330-4930-8b48-930a2e7805cb.png)
+
+하나의 루트 엘리멘트가 필요한 이유는 위 그림이 보여주는 것과 같다. 어떤 함수의 결과로 서로 다른 2개의 요소를 동시에 return 받을 수 있는가? 어느 한 시점에 함수의 결과로 2개 이상의 리턴 값을 반환 받는 것은 불가능하다(파이썬에서 return a, b와 같이 반환받을수 있지만, 엄연히 말해 튜플로 한 개의 리턴값을 받는 것이다)
 
 <br>
 
@@ -93,3 +105,17 @@ JSX에서 Vue에서와 마찬가지로 하나의 루트 엘레멘트를 갖는�
 단, 저장된 값일 경우 해당 변수명을 바로 사용가능하지만, 데이터 객체일 경우 변환이 필요함
 
 ![image](https://user-images.githubusercontent.com/93081720/176933021-b027d853-db5f-4d16-a385-410c740bbdbc.png)
+
+<br>
+
+### 컴포넌트
+
+함수형 컴포넌트는 화살표 함수로도 표현 가능함
+
+표현하는 방식만 다를 뿐 성능, 기능상 차이는 없음
+
+![image](https://user-images.githubusercontent.com/93081720/176992570-214aefa0-f0d3-4c4d-b988-b69014a60ec9.png)
+
+![image](https://user-images.githubusercontent.com/93081720/176992593-b6986ab5-9a35-48bf-9e61-9072940d219c.png)
+
+<br>
