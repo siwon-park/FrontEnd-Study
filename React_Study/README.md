@@ -1,3 +1,5 @@
+![React_logo](https://user-images.githubusercontent.com/93081720/177049645-2a440ed5-206c-4afe-a13b-31a7101a888b.png)
+
 # React_Study
 
 React 완벽 가이드 with Redux, Next.js, TypeScript 강의를 듣고 내용을 정리, 기록하는 곳
