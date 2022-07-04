@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import './NewExpense.css'
 
-const NewExpenseForm = () => {
+const NewExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('') // 처음 입력은 빈값이니 ''
   const [enteredAmount, setEnteredAmount] = useState('')
   const [enteredDate, setEnteredDate] = useState('')
@@ -25,7 +25,8 @@ const NewExpenseForm = () => {
       amount: enteredAmount,
       date: new Date(enteredDate),
     }
-    console.log(expenseData)
+    // console.log(expenseData)
+    props.onSaveExpenseData(expenseData)
     setEnteredTitle('')
     setEnteredAmount('')
     setEnteredDate('')
