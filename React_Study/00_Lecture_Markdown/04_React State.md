@@ -80,3 +80,34 @@ useState를 한 번만 호출하되, 매개변수의 값으로 객체를 넘겨�
 ![image](https://user-images.githubusercontent.com/93081720/177190826-bfbbc9e6-ee46-4a31-ac7c-5b9af5ab9506.png)
 
 <br>
+
+### 제어된 컴포넌트 vs 제어되지 않는 컴포넌트
+
+#### 제어된 컴포넌트(Controlled Component)
+
+- 부모에 의해 실제 로직이나 데이터가 동작, 표현되는 컴포넌트
+
+<br>
+
+#### 제어되지 않는 컴포넌트
+
+- 스스로 독립적으로 로직을 동작, 데이터를 표현하는 컴포넌트
+
+<br>
+
+### Stateful 컴포넌트 vs Stateless 컴포넌트
+
+#### stateful 컴포넌트
+
+- smart 컴포넌트, 상태유지 컴포넌트
+- state를 관리하기 위해 존재하는 컴포넌트
+
+<br>
+
+#### stateless 컴포넌트
+
+- dumb 컴포넌트, 프레젠테이셔널
+- 데이터 출력만을 위해 존재하는 컴포넌트
+
+<br>
+
