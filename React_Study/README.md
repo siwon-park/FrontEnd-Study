@@ -22,8 +22,8 @@ React 완벽 가이드 with Redux, Next.js, TypeScript 강의를 듣고 내용�
 | :white_check_mark: | 4. 리액트 state 및 이벤트 다루기                  |       |
 | :white_check_mark: | 5. 렌더링 리스트 및 조건부 Content                |       |
 | :white_check_mark: | 6. 리액트 컴포넌트 스타일링                       |       |
-| ▶️                  | 7. 리액트 앱 디버깅                               |       |
-| ⬜                  | 8. 연습 프로젝트                                  |       |
+| :white_check_mark: | 7. 리액트 앱 디버깅                               |       |
+| ▶️                  | 8. 연습 프로젝트                                  |       |
 | ⬜                  | 9. 프래그먼트 작업, Portals & Refs                |       |
 | ⬜                  | 10. Reducer & 컨텍스트 API                        |       |
 | ⬜                  | 11. 음식 주문 앱 빌딩하기                         |       |
