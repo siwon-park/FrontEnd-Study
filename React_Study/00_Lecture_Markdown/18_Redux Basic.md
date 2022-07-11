@@ -212,3 +212,25 @@ createSlice안에는 reducers라는 속성으로 지정해줬지만, reducer로 
 - increase함수에서 action.payload로 수정
 
 ![image](https://user-images.githubusercontent.com/93081720/178152991-0cdc404d-763f-496b-8d1f-609bb33b6308.png)
+
+<br>
+
+※ store에 여러 개의 리듀서를 등록했다면 실제 스토어에 있는 데이터를 접근할 때도 이전과 달리 조금 수정이 필요함
+
+![image](https://user-images.githubusercontent.com/93081720/178313487-ffb27a78-855a-458a-bf0f-adc48bf6b525.png)
+
+![image](https://user-images.githubusercontent.com/93081720/178313640-b9c0621a-0fa1-49e5-977c-41ef73787e62.png)
+
+<br>
+
+### 코드 분할하기
+
+각 Slice별로 파일을 분할하여 사용가능함
+
+이 때, export default oooSlice.reducer로 export했다면 import할 때는 oooReducer로 import함
+
+![image](https://user-images.githubusercontent.com/93081720/178318236-b6293315-a13b-4366-82bc-bb378f064c24.png)
+
+![image](https://user-images.githubusercontent.com/93081720/178318272-91c90922-9e3c-4056-a1a7-5f4edd6eb797.png)
+
+![image](https://user-images.githubusercontent.com/93081720/178318336-65345fa8-d537-4d4f-a2e3-85bf68dd7db2.png)

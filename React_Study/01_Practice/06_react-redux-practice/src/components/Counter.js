@@ -1,12 +1,12 @@
 import { useSelector, useDispatch } from 'react-redux'
 
-import { counterActions } from '../store';
+import { counterActions } from '../store/counter';
 import classes from './Counter.module.css';
 
 const Counter = () => {
   // useSelector를 쓰면 자동으로 subscription을 지정해줌
-  const counter = useSelector(state => state.counter)
-  const toggle = useSelector(state => state.showCounter)
+  const counter = useSelector(state => state.counter.counter)
+  const toggle = useSelector(state => state.counter.showCounter)
 
   const dispatch = useDispatch()
 
