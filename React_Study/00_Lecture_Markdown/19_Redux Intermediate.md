@@ -10,6 +10,11 @@ Input(Old State + Action) => OutPut(New State)
 
 ![image](https://user-images.githubusercontent.com/93081720/178477436-48ddda30-606c-4051-82b0-565950b79118.png)
 
+#### 그럼 비동기 코드는 어디서 실행해야하는가?
+
+- 컴포넌트 안에서 실행
+- action 생성자 안에서 실행
+
 <br>
 
 ### 코드 관리
