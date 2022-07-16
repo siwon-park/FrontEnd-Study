@@ -37,4 +37,12 @@ async와 await을 쓰면 코드를 더 간결하게 만들 수 있다
 
 
 
-### 에러 다루고 state 불러오기
+### Firebase
+
+구글이 제공하는 서비스로, 코드 작성 없이 사용 가능한 데이터베이스가 함께있는 백엔드 서버 어플리케이션
+
+(Firebase는 데이터베이스가 아님, 제공하는 기능 중 데이터베이스가 있을 뿐임)
+
+#### 비동기 POST 요청 보내기
+
+![image](https://user-images.githubusercontent.com/93081720/179334493-79cb81eb-224d-46f5-8f9b-da883c2bbdc4.png)
