@@ -2,7 +2,17 @@
 
 # React_Study
 
-React 완벽 가이드 with Redux, Next.js, TypeScript 강의를 듣고 내용을 정리, 기록하는 곳
+## React
+
+- 목차로 정리
+
+
+
+
+
+## React 완벽 가이드 with Redux, Next.js, TypeScript
+
+React 완벽 가이드 with Redux, Next.js, TypeScript 강의를 듣고 내용을 정리, 기록
 
 <br>
 
