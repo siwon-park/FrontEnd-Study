@@ -179,7 +179,7 @@ return <input ref={inputRef} />;  // 2. 마운트 시: DOM 요소로 변경
    └─ inputRef.current = 여전히 <input> DOM 요소
 
 5️⃣ 언마운트 후
-   └─ inputRef. current = null (React가 정리)
+   └─ inputRef.current = null (React가 정리)
 ```
 
 리턴 값이 변경되더라도 리렌더링이 발생하지 않고, 리렌더링이 되더라도 값이 변경되지 않기 때문에 setTimeOut과 같이 정확한 시간 계산이 필요할 때 사용할 수도 있다.
